@@ -1,46 +1,39 @@
-// This is a Rust file. It is a plain text file with a `.rs` extension.
+// 这是一个 Rust 文件。它是一个纯文本文件，后缀为 `.rs`。
 //
-// Like most modern programming languages, Rust supports comments. You're looking at one right now!
-// Comments are ignored by the compiler; you can leverage them to annotate code with notes and
-// explanations.
-// There are various ways to write comments in Rust, each with its own purpose.
-// For now we'll stick to the most common one: the line comment.
-// Everything from `//` to the end of the line is considered a comment.
+// 如大多数现代编程语言一样，Rust 支持注释。你现在看到的就是一个注释！
+// 注释会被编译器忽略；你可以利用它们来注解代码，添加备注和解释。
+// Rust 中有多种方式来写注释，每种方式都有其特定的用途。
+// 现在我们将重点关注最常见的注释：行注释。
+// 从 `//` 开始至行末的所有内容都被视为注释。
 
-// Exercises will include `TODO`, `todo!()` or `__` markers to draw your attention to the lines
-// where you need to write code.
-// You'll need to replace these markers with your own code to complete the exercise.
-// Sometimes it'll be enough to write a single line of code, other times you'll have to write
-// longer sections.
+// 练习中将包含 `TODO`、`todo!()` 或 `__` 标记，以引起你的注意，指示你需要编写代码的行。
+// 你需要将这些标记替换为自己的代码，以完成练习。
+// 有时只需要写一行代码，其他时候可能需要写更长的部分。
 //
-// If you get stuck for more than 10 minutes on an exercise, grab a trainer! We're here to help!
-// You can also find solutions to all exercises in the `solutions` git branch.
+// 如果你在某个练习上卡了超过 10 分钟，请找一个培训师！我们随时为你提供帮助！
+// 你也可以在 `solutions` git 分支中找到所有练习的解决方案。
 fn greeting() -> &'static str {
-    // TODO: fix me 👇
-    "I'm ready to __!"
+    // TODO: 修复我 👇
+    "我准备好学习 Rust 了！"
 }
 
-// Your solutions will be automatically verified by a set of tests.
-// You can run these tests directly by invoking the `cargo test` command in your terminal,
-// from the root of this exercise's directory. That's what the `wr` command does for you
-// under the hood.
+// 你的解决方案将通过一系列测试自动验证。
+// 你可以通过在终端中从该练习目录的根目录运行 `cargo test` 命令来直接运行这些测试，
+// 这就是 `wr` 命令在内部为你做的事情。
 //
-// Rust lets you write tests alongside your code.
-// The `#[cfg(test)]` attribute tells the compiler to only compile the code below when
-// running tests (i.e. when you run `cargo test`).
-// You'll learn more about attributes and testing later in the course.
-// For now, just know that you need to look for the `#[cfg(test)]` attribute to find the tests
-// that will be verifying the correctness of your solutions!
+// Rust 允许你在代码旁边编写测试。
+// `#[cfg(test)]` 属性告知编译器，仅在运行测试时（即当你运行 `cargo test` 时）编译下面的代码。
+// 你将在课程稍后学习更多关于属性和测试的内容。
+// 目前，只需了解你需要查找 `#[cfg(test)]` 属性来找到将验证你解决方案正确性的测试！
 //
-// ⚠️ **DO NOT MODIFY THE TESTS** ⚠️
-// They are there to help you validate your solutions. You should only change the code that's being
-// tested, not the tests themselves.
+// ⚠️ **不要修改测试** ⚠️
+// 测试是用来帮助你验证解决方案的。你只应更改被测试的代码，而不是测试本身。
 #[cfg(test)]
 mod tests {
     use crate::greeting;
 
     #[test]
     fn test_welcome() {
-        assert_eq!(greeting(), "I'm ready to learn Rust!");
+        assert_eq!(greeting(), "我准备好学习 Rust 了！");
     }
 }
