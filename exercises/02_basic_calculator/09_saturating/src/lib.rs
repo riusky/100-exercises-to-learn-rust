@@ -1,9 +1,10 @@
 pub fn factorial(n: u32) -> u32 {
-    let mut result = 1;
+    let mut result : u32 = 1;
     for i in 1..=n {
         // Use saturating multiplication to stop at the maximum value of u32
         // rather than overflowing and wrapping around
-        result *= i;
+        // 使用饱和乘法，确保到达 u32::MAX 后不再溢出
+        result = result.saturating_mul(i);
     }
     result
 }
